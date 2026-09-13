@@ -10,7 +10,10 @@ const app = express();
 
 // Permite peticiones desde el frontend
 app.use(cors({
-    origin: 'http://localhost:5173'
+    origin: [
+        'http://localhost:5173',
+        "https://venerable-otter-84e478.netlify.app/"
+    ],
 }));
 
 app.use(express.json());
